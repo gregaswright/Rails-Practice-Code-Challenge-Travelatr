@@ -1,0 +1,8 @@
+<h1> Post Show Page </h1>
+
+<h3><%= @post.title %></h3>
+<p><%= link_to @post.blogger.name, blogger_path(@post.blogger) %></p>
+<p><%= link_to @post.destination.name, destination_path(@post.destination) %></p>
+
+<%= button_to "Like", post_path(@post), method: :increase_likes %>
+
